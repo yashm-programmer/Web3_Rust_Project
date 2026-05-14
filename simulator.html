@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Block Simulator — Layer2 Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-simulator">
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">L2</div>
+      <div>
+        <h1>Layer2 Lab</h1>
+        <p>Arbitrum & Layer 2 explained</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="concepts.html">Concepts</a>
+      <a href="prices.html">Live Prices</a>
+      <a href="simulator.html" class="active">Block Simulator</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">Interactive learning</p>
+      <h2>Mine blocks and see chain immutability in action.</h2>
+      <p>Use the simulator to modify block data, mine block hashes, and watch how changing one block breaks the next.</p>
+    </section>
+
+    <section class="simulator-grid">
+      <article class="simulator-card">
+        <h3>Block 1</h3>
+        <label>Block Data</label>
+        <textarea id="block1-data" rows="4">First transaction batch</textarea>
+        <label>Previous Hash</label>
+        <input id="block1-prev" type="text" value="00000000000000000000000000000000" readonly />
+        <label>Nonce</label>
+        <input id="block1-nonce" type="number" value="0" min="0" />
+        <button id="block1-mine" class="button">Mine Block 1</button>
+        <div class="simulator-result">
+          <p><strong>Hash:</strong> <span id="block1-hash">—</span></p>
+          <p><strong>Status:</strong> <span id="block1-status">Waiting</span></p>
+        </div>
+      </article>
+
+      <article class="simulator-card">
+        <h3>Block 2</h3>
+        <label>Block Data</label>
+        <textarea id="block2-data" rows="4">Second transaction batch</textarea>
+        <label>Previous Hash</label>
+        <input id="block2-prev" type="text" readonly />
+        <label>Nonce</label>
+        <input id="block2-nonce" type="number" value="0" min="0" />
+        <button id="block2-mine" class="button">Mine Block 2</button>
+        <div class="simulator-result">
+          <p><strong>Hash:</strong> <span id="block2-hash">—</span></p>
+          <p><strong>Status:</strong> <span id="block2-status">Waiting</span></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="content-block">
+      <div>
+        <h3>Chain integrity check</h3>
+        <p>When you change Block 1 data, the hash of Block 1 changes. Block 2 still points to the old Block 1 hash, so the chain becomes invalid until the second block is mined again.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built by Haresh • <a href="https://github.com/haresh" target="_blank" rel="noreferrer">GitHub</a> • Web3 Workshop</p>
+  </footer>
+</body>
+</html>

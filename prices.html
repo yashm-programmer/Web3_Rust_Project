@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Prices — Layer2 Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="page-prices">
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">L2</div>
+      <div>
+        <h1>Layer2 Lab</h1>
+        <p>Arbitrum & Layer 2 explained</p>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="concepts.html">Concepts</a>
+      <a href="prices.html" class="active">Live Prices</a>
+      <a href="simulator.html">Block Simulator</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <p class="eyebrow">Market view</p>
+      <h2>Real-time crypto prices from CoinGecko.</h2>
+      <p>Fetch live ETH and BTC quotes in USD, view the 24h price change, and refresh data whenever you want.</p>
+    </section>
+
+    <section class="prices-panel">
+      <div class="price-cards" id="price-cards">
+        <div class="price-card placeholder">
+          <p>Loading prices...</p>
+        </div>
+      </div>
+      <button id="refresh-button" class="button">Refresh Prices</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built by Haresh • <a href="https://github.com/haresh" target="_blank" rel="noreferrer">GitHub</a> • Web3 Workshop</p>
+  </footer>
+</body>
+</html>
